@@ -1,1 +1,20 @@
 // Mixins in here
+
+.fontIndie() {
+  font-family: 'Indie Flower', cursive;
+  font-size: 4rem;
+}
+
+.fontRoboto() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.buttons(@color){
+	padding: 12px 20px;
+	color: @color;
+	background-color: @button-bg;
+  border-radius: 15px;
+  .fontRoboto();
+  text-align: center;
+}

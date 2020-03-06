@@ -1,24 +1,81 @@
-.home {
+.container {
+  @media @mobile {
+    padding: 0 2%;
+  }
+
+  .main-header {
+    border-bottom: 2px dashed @navigation-border;
+    width: 100%;
+
+    .text-content {
+      margin: 30px 0;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile {
 
-   
-    
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
+    }
+
+    .img-content {
+      img {
+        @media @mobile {
+          width: 100%;
+        }
+      }
+    }
+
+    .mobile-img-content {
+      display: none;
+
+      @media @mobile {
+        display:block;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      img {
+        @media @mobile {
+          width: 100%;
+
+        }
+      }
+    }
+
+    .desktop-img-content {
+
+      @media @mobile {
+        display: none;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+
+      }
+
       img {
         border-radius: 10px;
+
       }
     }
   }
@@ -30,17 +87,29 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -52,10 +121,31 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      display: block;
+      align-items: center;
+      justify-content: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 70%;
+        margin-left: 60px;
+      }
+    }
+
+    .btn {
+      .buttons(@white);
+
+      &:hover {
+        cursor: pointer;
+        color: @eastern-blue;
+        background-color: @sandy-beach;
+        transition: 0.5s;
+      }
     }
   }
 }// home
