@@ -169,7 +169,7 @@ img {
   margin: 0 auto;
 }
 header {
-  border-bottom: 2px dashed silver;
+  border-bottom: 2px dashed #C0C0C0;
   width: 100%;
 }
 header nav {
@@ -178,25 +178,37 @@ header nav {
   align-items: center;
   margin: 5% 0;
 }
+@media (max-width: 500px) {
+  header nav {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+  }
+}
 header nav a {
   text-decoration: none;
   display: flex;
 }
 header nav a:hover {
-  color: lightpink;
+  color: #FFEBCD;
   transition: 0.5s;
 }
 .logo {
   color: #000;
   font-family: 'Indie Flower', cursive;
   font-size: 4rem;
-  float: left;
+  flex-grow: 1;
+}
+@media (max-width: 500px) {
+  .logo {
+    display: block;
+  }
 }
 .item {
   color: #000;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
-  float: right;
+  padding-left: 3%;
 }
 .footer {
   width: 100%;
@@ -209,49 +221,139 @@ header nav a:hover {
   font-size: 1.6rem;
   padding: 20px;
 }
-.home .content-section {
+@media (max-width: 500px) {
+  .container {
+    padding: 0 2%;
+  }
+}
+.container .main-header {
+  border-bottom: 2px dashed #C0C0C0;
+  width: 100%;
+}
+.container .main-header .text-content {
+  margin: 30px 0;
+}
+.container .content-section {
   margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.home .content-section .text-content {
+.container .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
-.home .content-section .img-content {
+@media (max-width: 500px) {
+  .container .content-section .text-content {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container .content-section .img-content img {
+    width: 100%;
+  }
+}
+.container .content-section .mobile-img-content {
+  display: none;
+}
+@media (max-width: 500px) {
+  .container .content-section .mobile-img-content {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 500px) {
+  .container .content-section .mobile-img-content img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container .content-section .desktop-img-content {
+    display: none;
+  }
+}
+.container .content-section .img-content {
   width: 48%;
   padding-left: 1%;
 }
-.home .content-section .img-content img {
+@media (max-width: 500px) {
+  .container .content-section .img-content {
+    width: 100%;
+  }
+}
+.container .content-section .img-content img {
   border-radius: 10px;
 }
-.home .inverse-content {
+.container .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
 }
-.home .inverse-content .text-content {
+.container .inverse-content .text-content {
   padding-left: 1%;
   padding-right: 0;
 }
-.home .inverse-content .img-content {
+@media (max-width: 500px) {
+  .container .inverse-content .text-content {
+    width: 100%;
+  }
+}
+.container .inverse-content .img-content {
   padding-right: 1%;
   padding-left: 0;
 }
-.home .content-destination {
+@media (max-width: 500px) {
+  .container .inverse-content .img-content {
+    width: 100%;
+  }
+}
+.container .content-destination {
   width: 75%;
   margin: 0 auto 30px;
 }
-.home .content-destination img {
+@media (max-width: 500px) {
+  .container .content-destination {
+    width: 100%;
+  }
+}
+.container .content-destination img {
   border-radius: 10px;
 }
-.home .content-pick {
+.container .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
 }
-.home .content-pick .destination {
+@media (max-width: 500px) {
+  .container .content-pick {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.container .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .container .content-pick .destination {
+    width: 70%;
+  }
+}
+.container .content-pick .btn {
+  padding: 12px 20px;
+  color: #FFFFFF;
+  background-color: #17A2B8;
+  border-radius: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+.container .content-pick .btn:hover {
+  cursor: pointer;
+  color: #17A2B8;
+  background-color: #FFEBCD;
+  transition: 0.5s;
 }

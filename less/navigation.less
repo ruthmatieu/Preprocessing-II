@@ -1,16 +1,25 @@
 header {
-  border-bottom: 2px dashed silver;
+  border-bottom: 2px dashed @silver;
   width: 100%;
+
   nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 5% 0;
+
+    @media @mobile {
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+    }
+
     a {
       text-decoration: none;
       display: flex;
+
       &:hover {
-        color: lightpink;
+        color: @sandy-beach;
         transition: 0.5s;
       }
     }
@@ -19,13 +28,16 @@ header {
 
 .logo {
   color: #000;
-  font-family: 'Indie Flower', cursive;
-  font-size: 4rem;
-  float: left;
+  .fontIndie();
+  flex-grow: 1;
+
+  @media @mobile {
+    display: block;
+  }
 }
 .item {
   color: #000;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
-  float: right;
+  padding-left: 3%;
 }
